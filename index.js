@@ -14,6 +14,7 @@ $(function(){
 
     // Expect exactly 6 parts: CODE;QTY##;LOT...;ED...;PD...;BATCH
     if (result.split(';').length == 6) {
+        $(".row-default").hide();
         scanData.push(result);
 
         const [itemcode, qty, lotid, expirationdate, productiondate, batchno] = result.split(';');
